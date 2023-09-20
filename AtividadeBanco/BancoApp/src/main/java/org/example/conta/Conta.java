@@ -21,10 +21,6 @@ public class Conta {
 
 
 
-    public void criarConta() {
-
-
-    }
 
 
 

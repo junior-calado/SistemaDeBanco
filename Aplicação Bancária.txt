@@ -2,6 +2,10 @@ Aplicação Bancária
 
 
 Criar contas para pessoas e empresas
+	-> POUPANCA
+	-> SALARIO
+	-> CORRENTE
+
 Possibilidade de criar contas conjuntas (no máximo 2 pessoas do mesmo tipo com algum vínculo / ou união civil)
 
 

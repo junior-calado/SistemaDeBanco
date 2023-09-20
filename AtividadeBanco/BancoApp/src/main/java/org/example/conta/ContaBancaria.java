@@ -1,6 +1,7 @@
 package org.example.conta;
 
 import org.example.conta.Enum.TipoConta;
+import org.example.conta.Excetions.ContaException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,20 +22,26 @@ public class ContaBancaria {
     }
 
     public void depositar(double valor) {
-        if (valor > 0) {
-            saldo += valor;
-            transacoes.add(new Transacao("Depósito", valor));
+        if (valor <= 0) {
+            throw new ContaException("O valor do depósito tem que ser maior que 0");
         } else {
-            // Lógica para tratar depósitos inválidos (por exemplo, valor negativo)
+            this.saldo += valor;
+            Transacao transacao = new Transacao("Depósito", valor);//Verificar a classe Transacao
+            this.transacoes.add(transacao);
+            System.out.println("Depósito de R$" + valor + " realizado com sucesso.");
         }
     }
 
     public void pagar(double valor) {
-        if (valor > 0 && saldo >= valor) {
-            saldo -= valor;
-            transacoes.add(new Transacao("Pagamento", -valor));
+        if (valor <= 0) {
+            throw new ContaException("O valor do depósito tem que ser maior que 0");
+        } else if (valor > this.saldo) {
+            throw new ContaException("Saldo insuficiente para realizar o pagamento.");
         } else {
-            // Lógica para tratar pagamentos inválidos (por exemplo, saldo insuficiente)
+            this.saldo -= valor;
+            Transacao transacao = new Transacao("Pagamento", -valor); // O valor do pagamento é negativo
+            this.transacoes.add(transacao);
+            System.out.println("Pagamento de R$" + valor + " realizado com sucesso.");
         }
     }
 

@@ -31,6 +31,9 @@ public class Pessoa {
             case CORRENTE:
                 novaConta = new ContaCorrente("Jose", "123321", 50.0);
                 break;
+            case CONJUNTA:
+
+                break;
             default:
                 throw new ContaException("Tipo de conta invalida");
         }

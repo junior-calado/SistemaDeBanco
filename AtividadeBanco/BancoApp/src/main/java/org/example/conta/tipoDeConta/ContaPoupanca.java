@@ -3,6 +3,7 @@ package org.example.conta.tipoDeConta;
 import org.example.conta.Aplicacao;
 import org.example.conta.ContaBancaria;
 import org.example.conta.Enum.TipoConta;
+import org.example.conta.Transacao;
 
 import java.util.ArrayList;
 import java.util.List;
