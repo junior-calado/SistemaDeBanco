@@ -3,11 +3,10 @@ package org.example.pessoa;
 import org.example.conta.ContaBancaria;
 import org.example.conta.Enum.TipoCliente;
 import org.example.conta.Enum.TipoConta;
+import org.example.conta.Excetions.ContaException;
 import org.example.conta.tipoDeConta.ContaCorrente;
 import org.example.conta.tipoDeConta.ContaPoupanca;
 import org.example.conta.tipoDeConta.ContaSalario;
-
-import static org.example.conta.Enum.TipoConta.*;
 
 public class Pessoa {
 
@@ -18,7 +17,8 @@ public class Pessoa {
     private Double salario;
 
 
-    public ContaBancaria criarContaBancaria(TipoConta tipoConta) {
+    //Criando conta
+    public  ContaBancaria criarContaBancaria(TipoConta tipoConta,String titular, String numeroConta, double limiteMinimo) {
         ContaBancaria novaConta = null;
 
         switch (tipoConta) {
@@ -26,14 +26,14 @@ public class Pessoa {
                 novaConta = new ContaPoupanca("Jose", "123321", 50.0);
                 break;
             case SALARIO:
-                //novaConta = new ContaSalario();
+                novaConta = new ContaSalario("Jose", "123321", 50.0);
                 break;
             case CORRENTE:
-                //novaConta = new ContaCorrente();
+                novaConta = new ContaCorrente("Jose", "123321", 50.0);
                 break;
             default:
-                // Lógica para lidar com tipos de conta desconhecidos
-                break;
+                throw new ContaException("Tipo de conta invalida");
         }
-    }//Parei aqui, falta implementar metodos de Exception, mas tem que terminar primeiro os metodos de criar conta.
+        return novaConta;
+    }
 }

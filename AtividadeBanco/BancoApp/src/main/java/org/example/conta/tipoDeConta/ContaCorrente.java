@@ -2,14 +2,11 @@ package org.example.conta.tipoDeConta;
 
 import org.example.conta.ContaBancaria;
 import org.example.conta.Enum.TipoConta;
-import org.example.pessoa.Pessoa;
-
-import java.util.List;
 
 public class ContaCorrente extends ContaBancaria {
     private double limiteChequeEspecial;
 
-    public ContaCorrente(String numeroConta, Pessoa titular, double limiteChequeEspecial) {
+    public ContaCorrente(String titular, String numeroConta, double limiteChequeEspecial) {
         super(numeroConta, TipoConta.CORRENTE, titular);
         this.limiteChequeEspecial = limiteChequeEspecial;
     }

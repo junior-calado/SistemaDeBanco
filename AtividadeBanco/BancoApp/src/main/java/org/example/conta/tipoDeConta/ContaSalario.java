@@ -2,14 +2,11 @@ package org.example.conta.tipoDeConta;
 
 import org.example.conta.ContaBancaria;
 import org.example.conta.Enum.TipoConta;
-import org.example.pessoa.Pessoa;
-
-import java.util.List;
 
 public class ContaSalario extends ContaBancaria {
     private double limiteSaqueDiario;
 
-    public ContaSalario(String numeroConta, Pessoa titular, double limiteSaqueDiario) {
+    public ContaSalario(String titular, String numeroConta, double limiteSaqueDiario) {
         super(numeroConta, TipoConta.SALARIO, titular);
         this.limiteSaqueDiario = limiteSaqueDiario;
     }
