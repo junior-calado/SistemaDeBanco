@@ -28,7 +28,7 @@ public class Main {
 
         //gerar a conta POUPANCA da pessoa
         ContaBancaria contaRafaPoupanca = new ContaBancaria("1357", 50.0, TipoConta.SALARIO, rafa);
-        ContaPoupanca contaPoupanca = contaRafaPoupanca.criarContaPoupanca("12345", 1000.0, TipoConta.POUPANCA, rafa, 50.00);
+        ContaPoupanca contaPoupanca = contaRafaPoupanca.criarContaPoupanca(1000.0, TipoConta.POUPANCA, rafa, 50.00);
 
         double rendimentos = contaPoupanca.consultarRendimentos();
 
@@ -40,8 +40,8 @@ public class Main {
 
 
         //Gerar a conta CORRENTE da Pessoa
-        ContaBancaria contaRafaCorrente = new ContaBancaria("135123", 50.0, TipoConta.CORRENTE, rafa);
-        ContaCorrente contaCorrente = contaRafaCorrente.criarContaCorrente("12345", 1000.0, TipoConta.POUPANCA, rafa, 50.00);
+        ContaBancaria contaRafaCorrente = new ContaBancaria("123321", 50.0, TipoConta.CORRENTE, rafa);
+        ContaCorrente contaCorrente = contaRafaCorrente.criarContaCorrente(1000.0, rafa, TipoConta.CORRENTE, 50.00);
 
 
         System.out.println("#####################################");
