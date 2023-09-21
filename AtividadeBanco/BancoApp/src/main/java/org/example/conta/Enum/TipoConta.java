@@ -3,8 +3,7 @@ package org.example.conta.Enum;
 public enum TipoConta {
     POUPANCA("Conta Poupança"),
     SALARIO("Conta Salário"),
-    CORRENTE("Conta Corrente"),
-    CONJUNTA("Conta Conjunta");
+    CORRENTE("Conta Corrente");
 
     private final String descricao;
 

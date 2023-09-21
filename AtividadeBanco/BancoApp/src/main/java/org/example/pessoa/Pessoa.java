@@ -12,31 +12,30 @@ public class Pessoa {
 
     private String nome;
     private String cpf;
+    private String rg;
     private String mail;
+    private String telefone;
+    private String endereco;
     private TipoCliente tipo;
     private Double salario;
 
+    public Pessoa(String nome, String cpf, String rg, String mail, String telefone,
+                  String endereco, TipoCliente tipo, Double salario) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.rg = rg;
+        this.mail = mail;
+        this.telefone = telefone;
+        this.endereco = endereco;
+        this.tipo = tipo;
+        this.salario = salario;
+    }
 
-    //Criando conta
-    public  ContaBancaria criarContaBancaria(TipoConta tipoConta,String titular, String numeroConta, double limiteMinimo) {
-        ContaBancaria novaConta = null;
+    public String getNome() {
+        return nome;
+    }
 
-        switch (tipoConta) {
-            case POUPANCA:
-                novaConta = new ContaPoupanca("Jose", "123321", 50.0);
-                break;
-            case SALARIO:
-                novaConta = new ContaSalario("Jose", "123321", 50.0);
-                break;
-            case CORRENTE:
-                novaConta = new ContaCorrente("Jose", "123321", 50.0);
-                break;
-            case CONJUNTA:
-
-                break;
-            default:
-                throw new ContaException("Tipo de conta invalida");
-        }
-        return novaConta;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 }

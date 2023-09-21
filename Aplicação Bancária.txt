@@ -24,3 +24,44 @@ Ações:
 
 
 
+
+Conta Poupança:
+
+Finalidade: Geralmente utilizada para economizar dinheiro e ganhar juros sobre o saldo.
+Características:
+Rendimento de juros: Os bancos pagam juros sobre o saldo médio da conta.
+Acesso limitado: Pode haver restrições quanto ao número de saques mensais.
+Taxas baixas: Geralmente, não há custos mensais ou são muito baixos.
+Não permite cheques: Não é possível emitir cheques a partir de uma conta poupança.
+
+
+Conta Salário:
+
+Finalidade: Receber salário e benefícios diretamente do empregador.
+Características:
+Salário direto: É uma conta destinada exclusivamente ao recebimento de salário ou benefícios, geralmente vinculada ao empregador.
+Isenção de tarifas: Geralmente, não são cobradas tarifas mensais.
+Restrições de saque: Pode haver limitações nos saques ou transferências, incentivando a economia.
+
+
+Conta Corrente:
+
+Finalidade: Uso diário para transações financeiras, pagamento de contas e movimentação regular de fundos.
+Características:
+Acesso flexível: Não há restrições significativas quanto a saques ou transferências.
+Cheques e cartões: Permite emitir cheques, usar cartões de débito ou crédito vinculados à conta.
+Tarifas: Pode haver custos mensais, taxas de manutenção e tarifas por transações, dependendo do banco e do tipo de conta.
+
+
+
+Conta Conjunta:
+
+Finalidade: Uma conta compartilhada por duas ou mais pessoas, como casais, familiares ou parceiros de negócios.
+Características:
+Acesso compartilhado: Todos os titulares têm acesso à conta e podem fazer transações.
+Responsabilidade conjunta: Todos os titulares são responsáveis pelas obrigações da conta.
+Utilizada para compartilhar despesas e administrar finanças conjuntas.
+
+
+
+Em resumo, a conta poupança é ideal para economizar e ganhar juros, a conta salário é destinada ao recebimento de salários, a conta corrente é utilizada para transações diárias e pagamento de contas, e a conta conjunta é compartilhada por duas ou mais pessoas para gerenciar finanças conjuntas. Cada tipo de conta atende a diferentes necessidades financeiras, e a escolha depende dos objetivos individuais e das circunstâncias pessoais. É importante comparar as taxas e os termos oferecidos pelos bancos antes de abrir uma conta.

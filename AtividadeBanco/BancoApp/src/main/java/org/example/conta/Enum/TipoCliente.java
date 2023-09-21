@@ -1,8 +1,8 @@
 package org.example.conta.Enum;
 
 public enum TipoCliente {
-    PESSOA_FISICA("Pessoa Física"),
-    PESSOA_JURIDICA("Pessoa Jurídica");
+    PESSOA_LIVRE("Pessoa solteira"),
+    PESSOA_AMARRADA("Pessoa casada");
 
     //descrição associada a cada valor enum
     //exibir informações para o usuário quando necessário.
