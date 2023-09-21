@@ -14,7 +14,7 @@ public class Empresa {
 
 
     //Criando conta
-    public ContaBancaria criarContaBancaria(TipoConta tipoConta) {
+    public  ContaBancaria criarContaBancaria(TipoConta tipoConta,String titular, String numeroConta, double limiteMinimo) {
         ContaBancaria novaConta = null;
 
         switch (tipoConta) {
@@ -27,12 +27,14 @@ public class Empresa {
             case CORRENTE:
                 novaConta = new ContaCorrente("Jose", "123321", 50.0);
                 break;
+            case CONJUNTA:
+
+                break;
             default:
                 throw new ContaException("Tipo de conta invalida");
         }
         return novaConta;
     }
-
 
 
 }

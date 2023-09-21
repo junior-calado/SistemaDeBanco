@@ -28,6 +28,5 @@ public class ContaCorrente extends ContaBancaria {
         }
     }
 
-    // Outros métodos específicos de ContaCorrente, se necessário...
 }
 
