@@ -18,13 +18,13 @@ public class ContaPoupanca extends ContaBancaria {
     private List<Aplicacao> aplicacoes;
     private LocalDateTime dataAbertura;
 
-    public ContaPoupanca(String numeroConta, double saldo, TipoConta tipo, Pessoa nomeDaConta,
+    public ContaPoupanca( String numeroConta, double saldo, TipoConta tipo, Pessoa nomeDaConta,
                          double limiteMinimo) {
         super(numeroConta, saldo, tipo, nomeDaConta);
         this.limiteMinimo = limiteMinimo;
         this.taxaRendimento = 0.03; // Taxa de rendimento padrão (3% ao ano)
-        //this.dataAbertura = LocalDateTime.of(2013, Month.JANUARY, 1, 0, 0, 0);
-        this.dataAbertura = LocalDateTime.now();
+        this.dataAbertura = LocalDateTime.of(2013, Month.JANUARY, 1, 0, 0, 0);
+        //this.dataAbertura = LocalDateTime.now();
     }
 
     //getter and Setters

@@ -27,26 +27,57 @@ public class Main {
         //Gerou uma pessoa
 
         //gerar a conta POUPANCA da pessoa
-        ContaBancaria contaRafaPoupanca = new ContaBancaria("1357", 50.0, TipoConta.SALARIO, rafa);
-        ContaPoupanca contaPoupanca = contaRafaPoupanca.criarContaPoupanca(1000.0, TipoConta.POUPANCA, rafa, 50.00);
+        ContaBancaria contaRafaPoupanca = new ContaBancaria("1357", 5000.0, TipoConta.SALARIO, rafa);
+        ContaPoupanca contaPoupanca = contaRafaPoupanca.criarContaPoupanca(TipoConta.POUPANCA, rafa, 50.00);
 
-        double rendimentos = contaPoupanca.consultarRendimentos();
+        //double rendimentos = contaPoupanca.consultarRendimentos();
 
 
-        System.out.println("#####################################");
-        System.out.println("############Conta Gerada#############");
-        System.out.println("#####################################");
+        System.out.println("##############################################");
+        System.out.println("############Conta Poupanca Gerada#############");
+        System.out.println("##############################################");
         System.out.println(contaPoupanca.toString());
 
 
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+
+
         //Gerar a conta CORRENTE da Pessoa
-        ContaBancaria contaRafaCorrente = new ContaBancaria("123321", 50.0, TipoConta.CORRENTE, rafa);
-        ContaCorrente contaCorrente = contaRafaCorrente.criarContaCorrente(1000.0, rafa, TipoConta.CORRENTE, 50.00);
+        ContaBancaria contaRafaCorrente = new ContaBancaria("123321", 5000.0, TipoConta.CORRENTE, rafa);
+        ContaCorrente contaCorrente = contaRafaCorrente.criarContaCorrente(rafa, TipoConta.CORRENTE, 50.00);
 
 
-        System.out.println("#####################################");
-        System.out.println("############Conta Gerada#############");
-        System.out.println("#####################################");
+        System.out.println("##############################################");
+        System.out.println("############Conta Corrente Gerada#############");
+        System.out.println("##############################################");
         System.out.println(contaCorrente.toString());
+
+
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println(" ");
+
+
+
+        //Gerar a conta SALARIO da Pessoa
+        ContaBancaria contaRafaSalario = new ContaBancaria("123321", 5000.0, TipoConta.CORRENTE, rafa);
+        ContaCorrente contaSalario = contaRafaSalario.criarContaSalario(rafa, TipoConta.CORRENTE, 50.00);
+
+
+        System.out.println("##############################################");
+        System.out.println("############Conta Corrente Gerada#############");
+        System.out.println("##############################################");
+        System.out.println(contaCorrente.toString());
+
     }
 }

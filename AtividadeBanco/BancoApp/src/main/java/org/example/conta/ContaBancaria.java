@@ -88,7 +88,7 @@ public class ContaBancaria {
 
     //Metodo para criar conta Poupanca
     //verificar esse limite minimo
-    public ContaPoupanca criarContaPoupanca(double saldo, TipoConta tipo,
+    public ContaPoupanca criarContaPoupanca(TipoConta tipo,
                                             Pessoa nomeDaConta, double limiteMinimo) {
         ContaBancaria novaConta = null;
         String mensagem = "";
@@ -97,7 +97,7 @@ public class ContaBancaria {
         if (limiteMinimo < 50.00) {
             throw new ContaException("Erro ao criar a conta poupança!! Você precisa de um limite mínimo de pelo menos R$50,00");
         } else {
-            novaConta = new ContaPoupanca(this.numeroConta, saldo, tipo, nomeDaConta, limiteMinimo);//Tem que fazer o metodo para imprimir detalhes da conta
+            novaConta = new ContaPoupanca(this.numeroConta, this.saldo, tipo, nomeDaConta, limiteMinimo);//Tem que fazer o metodo para imprimir detalhes da conta
         }
         return (ContaPoupanca) novaConta;
     }
@@ -105,11 +105,20 @@ public class ContaBancaria {
 
     //Metodo para criar conta Corrente
     //talvez tirar o limite de cheque
-    public ContaCorrente criarContaCorrente( double saldo, Pessoa nomeDaConta,
+    public ContaCorrente criarContaCorrente(Pessoa nomeDaConta,
                                             TipoConta tipo, double limiteCheque) {
         ContaBancaria novaConta = null;
 
-        novaConta = new ContaCorrente(this.numeroConta, saldo, tipo, nomeDaConta, limiteCheque);//Tem que fazer o metodo para imprimir detalhes da conta
+        novaConta = new ContaCorrente(this.numeroConta, this.saldo, tipo, nomeDaConta, limiteCheque);//Tem que fazer o metodo para imprimir detalhes da conta
+
+        return (ContaCorrente) novaConta;
+    }
+
+    //Metodo para criar conta Salario
+    public ContaCorrente criarContaSalario(Pessoa nomeDaConta, TipoConta tipo, double limiteCheque) {
+        ContaBancaria novaConta = null;
+
+        novaConta = new ContaCorrente(this.numeroConta, this.saldo, tipo, nomeDaConta, limiteCheque);//Tem que fazer o metodo para imprimir detalhes da conta
 
         return (ContaCorrente) novaConta;
     }
