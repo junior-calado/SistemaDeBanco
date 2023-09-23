@@ -4,6 +4,7 @@ import org.example.conta.Enum.TipoConta;
 import org.example.conta.Excetions.ContaException;
 import org.example.conta.tipoDeConta.ContaCorrente;
 import org.example.conta.tipoDeConta.ContaPoupanca;
+import org.example.conta.tipoDeConta.ContaSalario;
 import org.example.pessoa.Pessoa;
 
 import java.util.List;
@@ -115,13 +116,24 @@ public class ContaBancaria {
     }
 
     //Metodo para criar conta Salario
-    public ContaCorrente criarContaSalario(Pessoa nomeDaConta, TipoConta tipo, double limiteCheque) {
+    public ContaSalario criarContaSalario(TipoConta tipo, double limiteSaqueDiario) {
         ContaBancaria novaConta = null;
 
-        novaConta = new ContaCorrente(this.numeroConta, this.saldo, tipo, nomeDaConta, limiteCheque);//Tem que fazer o metodo para imprimir detalhes da conta
+        novaConta = new ContaSalario(this.numeroConta, this.titular, this.saldo, tipo, limiteSaqueDiario);//Tem que fazer o metodo para imprimir detalhes da conta
 
-        return (ContaCorrente) novaConta;
+        return (ContaSalario) novaConta;
     }
+
+
+
+
+
+
+
+
+
+
+
 
 
     public void depositar(double valor) {
@@ -159,6 +171,7 @@ public class ContaBancaria {
             transacoes.add(transacao);
         }
     }
+
 
     public List<Transacao> gerarExtrato() {
         return transacoes;

@@ -8,11 +8,6 @@ import org.example.pessoa.Pessoa;
 public class ContaCorrente extends ContaBancaria {
     private double limiteChequeEspecial;
 
-    /*public ContaCorrente(ContaBancaria numeroConta, double saldo, Pessoa nomeDaConta, TipoConta tipo ) {
-        super(numeroConta, saldo, tipo, nomeDaConta);
-        this.limiteChequeEspecial = limiteChequeEspecial;
-    }*/
-
     public ContaCorrente(String numeroConta, double saldo, TipoConta tipo, Pessoa nomeDaConta, double limiteChequeEspecial) {
         super(numeroConta, saldo, tipo, nomeDaConta);
         this.limiteChequeEspecial = limiteChequeEspecial;

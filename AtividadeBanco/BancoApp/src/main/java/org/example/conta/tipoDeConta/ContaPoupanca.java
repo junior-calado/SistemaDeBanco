@@ -15,7 +15,7 @@ public class ContaPoupanca extends ContaBancaria {
     private double limiteMinimo;
     private double taxaRendimento;
 
-    private List<Aplicacao> aplicacoes;
+    private List<Transacao> transacao;
     private LocalDateTime dataAbertura;
 
     public ContaPoupanca( String numeroConta, double saldo, TipoConta tipo, Pessoa nomeDaConta,
@@ -36,8 +36,8 @@ public class ContaPoupanca extends ContaBancaria {
         this.limiteMinimo = limiteMinimo;
     }
 
-    public List<Aplicacao> getAplicacoes() {
-        return aplicacoes;
+    public List<Transacao> getTransacao() {
+        return transacao;
     }
 
     public double getTaxaRendimento() {
@@ -62,7 +62,7 @@ public class ContaPoupanca extends ContaBancaria {
         if (valor == 0) {
             System.out.println("O valor da transação deve ser diferente de zero.");
         } else {
-            double novoSaldo = getSaldo() + valor;
+            double novoSaldo = getSaldo() - valor;
             if (novoSaldo >= limiteMinimo) {
                 // Transação permitida, atualiza o saldo
                 setSaldo(novoSaldo);
