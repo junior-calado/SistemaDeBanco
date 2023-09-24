@@ -65,7 +65,7 @@ public class Main {
 
 
         //Gerar a conta CORRENTE da Pessoa
-        ContaBancaria contaRafaCorrente = new ContaBancaria("123321", 5000.0, TipoConta.CORRENTE, rafa);
+        ContaBancaria contaRafaCorrente = new ContaBancaria("123321", 3000.0, TipoConta.CORRENTE, rafa);
         ContaCorrente contaCorrente = contaRafaCorrente.criarContaCorrente(rafa, TipoConta.CORRENTE, 50.00);
 
 
@@ -73,6 +73,17 @@ public class Main {
         System.out.println("############Conta Corrente Gerada#############");
         System.out.println("##############################################");
         System.out.println(contaCorrente.toString());
+
+        System.out.println(" ");
+
+        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        ///////////////////////////////////realizando transaçoes conta salario//////////////////////////////////////////
+        contaCorrente.realizarTransacao("teste de 1000", 1000.00);
+        System.out.println("##############################################");
+        System.out.println("############Conta Salario Gerada##############");
+        System.out.println("##############################################");
+        System.out.println(contaCorrente.toString());
+
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -87,7 +98,7 @@ public class Main {
 
 
         //Gerar a conta SALARIO da Pessoa
-        ContaBancaria contaRafaSalario = new ContaBancaria("123321", 500.0, TipoConta.CORRENTE, rafa);
+        ContaBancaria contaRafaSalario = new ContaBancaria("123321", 50000.0, TipoConta.CORRENTE, rafa);
         ContaSalario contaSalario = contaRafaSalario.criarContaSalario(TipoConta.CORRENTE, 1000.0);
 
 

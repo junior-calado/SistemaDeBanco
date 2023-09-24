@@ -4,6 +4,7 @@ import org.example.conta.Aplicacao;
 import org.example.conta.ContaBancaria;
 import org.example.conta.Enum.TipoConta;
 import org.example.conta.Transacao;
+import org.example.interfaces.InformacoesConta;
 import org.example.pessoa.Pessoa;
 
 import java.time.LocalDateTime;

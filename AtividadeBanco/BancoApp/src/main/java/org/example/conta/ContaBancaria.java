@@ -5,16 +5,20 @@ import org.example.conta.Excetions.ContaException;
 import org.example.conta.tipoDeConta.ContaCorrente;
 import org.example.conta.tipoDeConta.ContaPoupanca;
 import org.example.conta.tipoDeConta.ContaSalario;
+import org.example.interfaces.InformacoesConta;
 import org.example.pessoa.Pessoa;
 
 import java.util.List;
 
-public class ContaBancaria {
+public class ContaBancaria implements InformacoesConta {
     private String numeroConta;
     private double saldo;
     private TipoConta tipo;
     private Pessoa titular;
     private List<Transacao> transacoes;
+
+
+    private Financiamento financiamento;
 
     //Constructor
     public ContaBancaria(String numeroConta, double saldo, TipoConta tipo, Pessoa nomeDaConta) {
@@ -22,6 +26,7 @@ public class ContaBancaria {
         this.saldo = saldo;
         this.tipo = tipo;
         this.titular = nomeDaConta;
+        this.financiamento = new Financiamento(0.0, 0);
     }
 
     //Criando conta
@@ -130,6 +135,35 @@ public class ContaBancaria {
 
 
 
+    public double solicitarFinanciamento(double valorSolicitado) {
+        if (valorSolicitado <= 0) {
+            throw new IllegalArgumentException("O valor do financiamento deve ser maior que zero.");
+        }
+
+        double valorParcela = financiamento.calcularValorParcela(valorSolicitado);
+
+        // Execute a lógica de processamento do financiamento
+        // Por exemplo, adicione o valor do financiamento ao saldo da conta
+
+        // Neste exemplo, apenas retornaremos o valor do financiamento
+        double valorFinanciado = valorSolicitado;
+
+        // Registre a transação de financiamento
+        Transacao transacao = new Transacao("Financiamento", valorFinanciado);
+        transacoes.add(transacao);
+
+        // Atualize o saldo da conta (adicione o valor do financiamento)
+        saldo += valorFinanciado;
+
+        // Retorne o valor efetivamente financiado
+        return valorFinanciado;
+    }
+
+
+
+
+
+
 
 
 
@@ -141,7 +175,7 @@ public class ContaBancaria {
             throw new ContaException("O valor do depósito tem que ser maior que 0");
         } else {
             this.saldo += valor;
-            Transacao transacao = new Transacao("Depósito", valor);//Verificar a classe Transacao
+            Transacao transacao = new Transacao("Depósito", valor);
             this.transacoes.add(transacao);
             System.out.println("Depósito de R$" + valor + " realizado com sucesso.");
         }
@@ -196,21 +230,12 @@ public class ContaBancaria {
 
     // Getters e setters
 
-    public String getNumeroConta() {
-        return numeroConta;
-    }
+
 
     public TipoConta getTipo() {
         return tipo;
     }
 
-    public Pessoa getTitular() {
-        return titular;
-    }
-
-    public double getSaldo() {
-        return saldo;
-    }
 
     public void setTitular(Pessoa titular) {
         this.titular = titular;
@@ -231,4 +256,28 @@ public class ContaBancaria {
     public void setTransacoes(List<Transacao> transacoes) {
         this.transacoes = transacoes;
     }
+
+
+
+    @Override
+    public String getNumeroConta() {
+        return numeroConta;
+    }
+
+    @Override
+    public TipoConta getTipoConta() {
+        return tipo;
+    }
+
+    @Override
+    public Pessoa getTitular() {
+        return titular;
+    }
+
+    @Override
+    public double getSaldo() {
+        return saldo;
+    }
+
+
 }

@@ -101,7 +101,8 @@ public class ContaConjunta {
             titularesStr.append(titular.getNome()).append(", ");
         }
         titularesStr.delete(titularesStr.length() - 2, titularesStr.length()); // Remova a vírgula extra no final
-*/
+        */
+
         return "Conta Conjunta - Número: " + getNumeroConta() +
                 "\n Titular principal: " + titular1.getNome() +
                 "\nTitular secundario: " + titular2.getNome() +

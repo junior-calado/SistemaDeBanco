@@ -26,7 +26,7 @@ public class ContaCorrente extends ContaBancaria {
         if (valor == 0) {
             System.out.println("O valor da transação deve ser diferente de zero.");
         } else {
-            double novoSaldo = getSaldo() + valor;
+            double novoSaldo = getSaldo() - valor;
             if (novoSaldo >= -limiteChequeEspecial) {
                 // Transação permitida, atualiza o saldo
                 setSaldo(novoSaldo);
